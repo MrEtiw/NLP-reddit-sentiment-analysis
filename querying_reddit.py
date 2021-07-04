@@ -6,5 +6,3 @@ def get_comments(reddit_client, url):
     for comment in subComments:
         bodyComment.append(comment.body)
     return
-
-
