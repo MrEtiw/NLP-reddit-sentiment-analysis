@@ -6,27 +6,18 @@ import datetime as dt
 import pandas as pd
 import numpy as np
 import os
-
-
-
-USER = os.getenv("ID")
-
-
 nltk.download('vader_lexicon')
 nltk.download('stopwords')
 
+from initialize_reddit_client import set_credentials_env_var, get_reddit_client
+
+
+set_credentials_env_var("reddit_credentials.json")
+reddit_client = get_reddit_client()
 
 
 
-reddit = praw.Reddit(client_id='*********',
-                    client_secret='******************',
-                    user_agent='*********') ## to use this, make a Reddit app. Client ID is in top left corner, client secret is given, and user agent is the username that the app is under
-
-
-
-
-
-sub_reddits = reddit.subreddit('wallstreetbets')
+sub_reddits = reddit_client.subreddit('FourSentenceStories')
 stocks = ["GME", "AMC"] 
 # For example purposes. To use this as a live trading tool, you'd want to populate this with tickers that have been mentioned on the pertinent community (WSB in our case) in a specified period.
 
@@ -34,8 +25,7 @@ stocks = ["GME", "AMC"]
 
 
 
-def commentSentiment(ticker, urlT):
-    subComments = []
+def commentSentiment(urlT):
     bodyComment = []
     try:
         check = reddit.submission(url=urlT)
@@ -105,6 +95,12 @@ def get_date(date):
     return dt.datetime.fromtimestamp(date)
 
 
+
+submissions = reddit_client.subreddit("FourSentenceStories").search("He speaks", limit = 2)
+for sub in submissions:
+    print(sub.domain)
+    print(sub.num_comments)
+    print(sub.url)
 
 
 
