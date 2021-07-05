@@ -1,13 +1,14 @@
 import praw
-from initialize_reddit_client import (set_credentials_env_var,
-                                      get_reddit_client)
-from querying_reddit import (get_subreddit_by_name,
-                             get_posts_including_a_query,
-                             get_url_of_posts,
-                             get_redditor_of_post,
-                             get_info_about_redditor,
-                             get_info_about_post,
-                             get_top_level_comments_from_url)
+from initialize_reddit_client import set_credentials_env_var, get_reddit_client
+from querying_reddit import (
+    get_subreddit_by_name,
+    get_posts_including_a_query,
+    get_url_of_posts,
+    get_redditor_of_post,
+    get_info_about_redditor,
+    get_info_about_post,
+    get_top_level_comments_from_url,
+)
 
 reddit_client = set_credentials_env_var("reddit_credentials.json")
 reddit_client = get_reddit_client()
@@ -19,6 +20,7 @@ redditor = get_redditor_of_post(reddit_client, urls[0])
 info_redditor = get_info_about_redditor(redditor)
 
 submission = reddit_client.submission(url=urls[0])
+
 
 def iter_top_level(comments):
     for top_level_comment in comments:
@@ -33,4 +35,4 @@ for comment in iter_top_level(submission.comments):
     print(comment.body)
 
 
-a = get_top_level_comments_from_url(reddit_client,urls[0])
+a = get_top_level_comments_from_url(reddit_client, urls[0])
