@@ -25,7 +25,7 @@ stocks = ["GME", "AMC"]
 def commentSentiment(urlT):
     bodyComment = []
     try:
-        check = reddit.submission(url=urlT)
+        check = reddit_client.submission(url=urlT)
         subComments = check.comments
     except:
         return 0
