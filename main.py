@@ -1,16 +1,12 @@
 import nltk
 from nltk.sentiment.vader import SentimentIntensityAnalyzer as SIA
-import praw
-import math
 import datetime as dt
 import pandas as pd
-import numpy as np
-import os
 
 nltk.download("vader_lexicon")
 nltk.download("stopwords")
 
-from initialize_reddit_client import set_credentials_env_var, get_reddit_client
+from setup.initialize_reddit_client import set_credentials_env_var, get_reddit_client
 
 
 set_credentials_env_var("reddit_credentials.json")
