@@ -130,4 +130,6 @@ dmypy.json
 
 # Specific to this project
 reddit_credentials.json
+./data
+.csv
 
