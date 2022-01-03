@@ -1,4 +1,4 @@
-# Reddit Sentiment Analysi
+# Reddit Sentiment Analysis
 
 **CONTEXT**:
 
