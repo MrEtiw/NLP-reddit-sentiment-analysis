@@ -15,7 +15,7 @@ Personal project, mainly to learn how to scrap reddit. Not intended for extensiv
 
 **LANGUAGES / TECH**:
 - Python
-- Reddit API (via *Python Reddit API Wrapper, PRAW*
+- Reddit API (via *Python Reddit API Wrapper, PRAW*)
 
 **ADDITIONAL INFOS:**
 
