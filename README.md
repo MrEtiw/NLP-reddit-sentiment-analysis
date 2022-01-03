@@ -1,6 +1,8 @@
 # Reddit Sentiment Analysi
 
-**CONTEXT**: Personal project, mainly to learn how to scrap reddit. Not intended for extensive NLP implementations.
+**CONTEXT**:
+
+Personal project, mainly to learn how to scrap reddit. Not intended for extensive NLP implementations.
 
 **DESCRIPTION**:
 - Scraping specifics subreddits.
@@ -11,7 +13,9 @@
 - NLP Task: see if comments/posts are mainly positive or negative for specific stock tickers.
 - Explanations and comments written in English.
 
-**LANGUAGES / TECH**: Python, reddit API
+**LANGUAGES / TECH**:
+- Python
+- Reddit API (via *Python Reddit API Wrapper, PRAW*
 
 **ADDITIONAL INFOS:**
 
