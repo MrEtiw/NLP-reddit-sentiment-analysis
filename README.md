@@ -8,7 +8,7 @@
 - Recursively scraping somments on posts.
 - Joining scrap jobs from multiple days to build one complete database.
 - Intended to learn to scrap reddit, not really for actual NLP applications.
-- Objective: see if comments/posts are mainly positive or negative for specific stock tickers.
+- NLP Task: see if comments/posts are mainly positive or negative for specific stock tickers.
 - Explanations and comments written in English.
 
 **LANGUAGES / TECH**: Python, reddit API
